@@ -1,8 +1,9 @@
-const Bottle = (bottle) => {
-    console.log(bottle)
+const Bottle = ({bottle}) => {
+    const {name, img, price}=bottle;
     return (
         <div>
-            <h3>Bottle</h3>
+            <h3>Bottle: {name}</h3>
+            <img src={img} alt="" />
         </div>
     );
 };
