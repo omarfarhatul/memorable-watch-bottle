@@ -6,7 +6,6 @@ const Bottles = () => {
     const [bottles, setBottles]=useState([]);
     const [cart, setCart]=useState([]);
 
-
     useEffect(()=>{
         fetch('bottles.json')
         .then(res=>res.json())
