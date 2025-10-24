@@ -15,9 +15,12 @@ const Bottles = () => {
 
     // load cart from local storage
     useEffect(()=>{
-        const storedCart=getStoredCart();
-        console.log(storedCart);
-    },[])
+        console.log('called the useEffect', bottles.length);
+        if(bottles.length>0){
+            const storedCart=getStoredCart();
+            console.log(storedCart);
+        }
+    },[bottles])
 
     const handleAddToCart= bottle=>{
         const newCart=[...cart, bottle];
