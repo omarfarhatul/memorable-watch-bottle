@@ -41,6 +41,8 @@ const Bottles = () => {
 
     const handleRemoveFromCart=id=>{
         // visual sart remove
+        const remainingCart=cart.filter(bottle=>bottle.id!==id);
+        setCart(remainingCart);
         // remove form LS
         removeFromLS(id);
     }
